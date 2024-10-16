@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #f44336;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eee;
+    margin: 0px;
+}
+h1 {
+    margin: 0px 0px 10px;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+}
+.guess-game {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding:20px;
+    margin: 0px auto;
+    height: 100vh ;
+    .game-area {
+        padding-bottom: 60px;
+        .inputs {
+            > div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+
+                span {
+                    font-size: 40px;
+                    font-weight: bold;
+                    margin-right: 15px;
+                }
+
+                input {
+                    text-align: center;
+                    caret-color: var(--primary-color);
+                    width: 60px;
+                    height: 60px;
+                    font-size: 40px;
+                    margin-right: 10px;
+                    border: none;
+                    border-bottom: 3px solid #333;
+
+                    &:focus {
+                        outline-color: #ccc;
+                    }
+
+                    &.yes-in-place {
+                        background-color: #f89e13;
+                        border: #f89e13;
+                        color: white;
+                    }
+
+                    &.not-in-place {
+                        background-color: #18ba89;
+                        border:#18ba89;
+                        color: white;
+                    }
+
+                    &.no {
+                        background-color: #27303f;
+                        border: #27303f;
+                        color: white;
+                    }
+                }
+            }
+
+            .disabled-inputs {
+                opacity: 0.5;
+                pointer-events: none;
+            }
+        }
+        .control{
+            margin-top: 20px ;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            .check{
+                flex: 1;
+                background-color: #f44336;
+                margin-right: 20px ;
+            }
+            .hint{
+                background-color: #18ba89;
+            }
+            .check ,
+            .hint{
+                padding: 20px ;
+                color: whtie;
+                cursor: pointer;
+                border: none;
+                border-radius: 5px ;
+                color: white ;
+                font-size: 20px ;
+                font-weight: bold;
+            }
+        }
+        .message{
+            text-align: center;
+            font-size: 30px ;
+            font-weight: bold ;
+            padding: 20px ;
+            span{
+                color: var(--primary-color);
+                font-size: 40px ;
+                display: block ; 
+                padding: 10px; 
+            }
+            p{
+                margin: 10px 15px;
+            }
+        }
+    }
+
+    .key-colors {
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .key-color {
+            padding: 20px;
+            background-color: #fff;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .key {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+
+                &.in-place {
+                    background-color: #f89e13;
+                }
+
+                &.not-in-place {
+                    background-color: #18ba89;
+                }
+
+                &.no {
+                    background-color: #27303f;
+                }
+            }
+
+            .key-text {
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+}
